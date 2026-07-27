@@ -11,18 +11,37 @@ main p {
 }
 
 #info-sas {
-    padding: 50px;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding: 50px 15%;
 }
 
 #info-sas h2 {
     margin-bottom: 20px;
 }
 
+#funcionalidades {
+    background-color: #fafcff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 10px;
+}
+
+#funcionalidades h2 {
+    margin-bottom: 30px;
+}
+
+.function-up {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .box-functions {
     max-width: 300px;
-    height: 200px;
+    width: 100%;
+    min-height: 200px;
     background-color: #ffffff;
     margin: 10px;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
@@ -34,73 +53,124 @@ main p {
     justify-content: center;
 }
 
-@media (max-width: 768px) {
-    .function-up {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #funcionalidades {
-        padding: 30px 10px;
-    }
-}
-
 .box-functions p {
     margin-top: 20px;
 }
 
-#funcionalidades {
-    background-color: #fafcff;
-    min-height: 600px;
-    align-items: center;
-    padding: 25px 10px;
-    justify-content: center;
-}
-
-#funcionalidades h2 {
-    margin-bottom: 30px;
-}
-
-.function-up {
+.icon-container {
+    width: 75px;
+    height: 75px;
+    background-color: rgba(0, 82, 204, 0.08);
+    border-radius: 50%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
 }
 
+.icon-container i {
+    font-size: 34px;
+    color: #0052CC;
+    transition: transform 0.3s ease;
+}
 
+.box-functions:hover .icon-container {
+    background-color: rgba(212, 136, 0, 0.15);
+}
+
+.box-functions:hover .icon-container i {
+    transform: scale(1.35) rotate(5deg);
+    color: #D48800;
+}
 
 #beneficios {
-    padding: 30px;
+    padding: 80px 10%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    background-color: #F1F5F9;
 }
 
-.beneficios-box {
-    width: 250px;
-    height: 50px;
+#beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.beneficio-card {
     background-color: #ffffff;
-    margin: 20px;
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-align: left;
+}
+
+.beneficio-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #0052CC;
+}
+
+.ben-icon {
+    background-color: rgba(212, 136, 0, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 14px;
-    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
-    padding: 5px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 
-#beneficios-up {
-    display: flex;
+.ben-icon i {
+    color: #D48800;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.beneficio-card:hover .ben-icon {
+    background-color: #D48800;
+}
+
+.beneficio-card:hover .ben-icon i {
+    color: #ffffff;
+    transform: scale(1.15) rotate(-10deg);
+}
+
+.ben-text h4 {
+    color: #0B1B3D;
+    font-size: 19px;
+    margin-bottom: 8px;
+    font-family: "Poppins", sans-serif;
+}
+
+.ben-text p {
+    color: #64748b;
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
-    #beneficios{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 30px 20px;
+    #beneficios {
+        padding: 60px 20px;
     }
 
-    #beneficios-up {
-        flex-direction: column;
-        align-items: center;
+    #beneficios-grid {
+        grid-template-columns: 1fr;
     }
 }
