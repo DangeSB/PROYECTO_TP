@@ -12,6 +12,7 @@
             href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
         <header>
@@ -35,6 +36,8 @@
                 <p>Redirige tu enseñanza al futuro de la tecnologia</p>
                 <button>En desarrollo...</button>
             </div>
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
         </header>
 
         <main>
@@ -44,40 +47,72 @@
             </section>
 
             <section class="main-section" id="funcionalidades">
-                <h2>Funcionalidades</h2>
+                <h2>Funcionalidades Principales</h2>
                 <div class="function-up">
                     <article class="box-functions">
-                        <h3>Sistema NFC</h3>
+                        <div class="icon-container">
+                            <i class="fa-brands fa-nfc-symbol"></i>
+                        </div>
+                        <h3>Tecnología NFC</h3>
                         <p>S.A.S Implementa el sistema NFC para registrar los datos de los alumnos al sistema</p>
                     </article>
 
                     <article class="box-functions">
-                        <h3>Camara Biometrica</h3>
+                        <div class="icon-container">
+                            <i class="fa-solid fa-fingerprint"></i>
+                        </div>
+                        <h3>Validacion Biometrica</h3>
                         <p>Complementamos nuestro sistema con reconocedores faciales para maximizar la seguirdad y fiabilidad de los datos</p>
                     </article>
                 </div>
 
                 <article class="box-functions">
+                    <div class="icon-container">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
                     <h3>Dashboard</h3>
                     <p>Nuestro sistema cuenta con un panel amigable para el acceso y edicion rapida de los datos</p>
                 </article>
             </section>
 
             <section class="main-section" id="beneficios">
-                <h2>Beneficios</h2>
-                <div id="beneficios-up">
-                    <article class="beneficios-box">
-                        <h4>✓ Ahorro de tiempo</h4>
-                    </article>
-
-                    <article class="beneficios-box">
-                        <h4>✓ Mayor Seguridad</h4>
-                    </article>
+                <div class="reveal">
+                    <h2>Beneficios del Sistema</h2>
+                    <p style="color: #64748b; margin-bottom: 40px; font-size: 18px;">Impacto directo en la gestión y seguridad
+                        institucional</p>
                 </div>
 
-                <article class="beneficios-box">
-                    <h4>✓ Interfaz facil de comprender</h4>
-                </article>
+                <div id="beneficios-grid">
+                    <article class="beneficio-card reveal" style="transition-delay: 0.1s;">
+                        <div class="ben-icon">
+                            <i class="fa-solid fa-stopwatch"></i>
+                        </div>
+                        <div class="ben-text">
+                            <h4>0 Minutos Perdidos</h4>
+                            <p>Devuelve el 100% del tiempo pedagógico a los docentes automatizando el registro.</p>
+                        </div>
+                    </article>
+
+                    <article class="beneficio-card reveal" style="transition-delay: 0.3s;">
+                        <div class="ben-icon">
+                            <i class="fa-solid fa-battery-full"></i>
+                        </div>
+                        <div class="ben-text">
+                            <h4>Autonomía de 30 Hrs</h4>
+                            <p>Funcionamiento ininterrumpido garantizado, incluso ante cortes de energía eléctrica.</p>
+                        </div>
+                    </article>
+
+                    <article class="beneficio-card reveal" style="transition-delay: 0.5s;">
+                        <div class="ben-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="ben-text">
+                            <h4>Máxima Seguridad</h4>
+                            <p>Datos encriptados y prevención total de suplantaciones con tecnología biométrica.</p>
+                        </div>
+                    </article>
+                </div>
             </section>
         </main>
 

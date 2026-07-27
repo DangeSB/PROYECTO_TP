@@ -1,16 +1,26 @@
 nav {
-    background-color: #2F3542;
+    background: #2F3542d9;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
     padding: 10px 20px;
     width: 100%;
     height: 60px;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav.scrolled {
+    background: #2F3542fa;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    height: 60px;
+    padding: 10px 20px;
 }
 
 nav a {
@@ -24,6 +34,25 @@ h5 {
     font-weight: 600;
     font-size: 14px;
     cursor: default;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+    background: var(--color-accent);
 }
 
 .nav-links {
