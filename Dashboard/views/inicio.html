@@ -1,0 +1,66 @@
+<style>
+    .controlpanel-container {
+        display: grid;
+        grid-template-columns: 150px repeat(3 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "cp-header cp-header cp-header"
+        "cp-body cp-body cp-body"
+        "cp-body cp-body cp-body"
+        "cp-body cp-body cp-body" ;
+        padding: 0px 20px;
+    }
+
+    .cp-header {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "date   attendance   entries    entries"
+        "date   attendance  exits      exits";
+        column-gap: 20px;
+        row-gap: 10px;
+    }
+
+    .cp-header article {
+        background: linear-gradient(to right, #2F3542, #434b5d);
+        padding: 15px 20px;
+        border-radius: 16px;
+        color: white;
+    }
+
+    .cp-fast-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+</style>
+
+
+
+
+<main class="controlpanel-container"> 
+    <section class="cp-header" style="grid-area: cp-header;">
+
+        <article id="date" class="cp-fast-info" style="grid-area: date;">
+            Cargando fecha...
+        </article>
+
+        <article id="attendance" class="cp-fast-info" style="grid-area: attendance;">
+            cargando asistencia...
+        </article>
+
+        <article id="entries" class="cp-fast-info" style="grid-area: entries;">
+            cargando entradas...
+        </article>
+
+        <article id="exits" class="cp-fast-info" style="grid-area: exits;">
+            cargando salidas...
+        </article>
+
+        
+    </section>
+</main>
